@@ -12,4 +12,10 @@ public class StatusMessageController {
     public String statusMessage(){
         return statusMessage.getMessage();
     }
+
+    @RequestMapping("/api/message/reset")
+    public String resetStatusMessage(){
+        statusMessage = new StatusMessage();
+        return "ok";
+    }
 }

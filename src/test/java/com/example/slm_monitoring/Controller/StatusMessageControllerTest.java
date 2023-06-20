@@ -16,4 +16,17 @@ class StatusMessageControllerTest {
         // Assert
         assertEquals("Everything works as expected",result);
     }
+    @Test
+    void resetStatusMessage(){
+        // Arrange
+        StatusMessageController controller = new StatusMessageController();
+
+        // Act
+        String result = controller.resetStatusMessage();
+        String result2 = controller.statusMessage();
+
+        // Assert
+        assertEquals("ok",result);
+        assertEquals("Everything works as expected",result2);
+    }
 }
