@@ -1,10 +1,15 @@
 package com.example.slm_monitoring.Controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
 
+import com.example.slm_monitoring.StatusMessage;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
 public class StatusMessageController {
-    @GetMapping("/api/message")
+    private StatusMessage statusMessage = new StatusMessage();
+    @RequestMapping("/api/message")
     public String statusMessage(){
-        return "Everything works as expected";
+        return statusMessage.getMessage();
     }
 }
