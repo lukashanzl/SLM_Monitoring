@@ -18,4 +18,10 @@ public class StatusMessageController {
         statusMessage = new StatusMessage();
         return "ok";
     }
+
+    @RequestMapping("/api/message/set")
+    public String setMessage(String m) {
+        statusMessage.setMessage(m);
+        return "ok";
+    }
 }
